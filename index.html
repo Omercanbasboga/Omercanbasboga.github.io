@@ -8,8 +8,11 @@
 </head>
 <body>
 <header>
-  <h1>Omer Can Basboga</h1>
-  <p class="tagline">Full-stack developer. Java / Spring Boot on the backend, React on the frontend.</p>
+  <div class="header-top">
+    <h1>Omer Can Basboga</h1>
+    <button id="lang-toggle" type="button" aria-label="Switch language">TR</button>
+  </div>
+  <p class="tagline" data-en="Full-stack developer. Java / Spring Boot on the backend, React on the frontend." data-tr="Full-stack yazılımcı. Backend'de Java / Spring Boot, frontend'de React.">Full-stack developer. Java / Spring Boot on the backend, React on the frontend.</p>
   <nav>
     <a href="https://github.com/Omercanbasboga">GitHub</a>
     <a href="https://www.linkedin.com/in/%C3%B6mer-can-ba%C5%9Fbo%C4%9Fa-b7940223a/">LinkedIn</a>
@@ -19,18 +22,18 @@
 
 <main>
   <section>
-    <h2>About</h2>
+    <h2 data-en="About" data-tr="Hakkımda">About</h2>
     <div class="about-block">
       <img src="assets/profile.jpg" alt="Omer Can Basboga" class="profile-photo">
       <div>
-        <p>
+        <p data-en="I'm based in Istanbul. Most of my day-to-day is Spring Boot, PostgreSQL, and React, usually on internal tools that other teams end up depending on. I like projects where the interesting part is a real business rule or a real data problem, not just wiring up a CRUD screen." data-tr="İstanbul'da yaşıyorum. Günlük işim çoğunlukla Spring Boot, PostgreSQL ve React, genelde başka ekiplerin de bağımlı kaldığı iç araçlar üzerine. İlgimi çeken projeler düz bir CRUD ekranı değil, gerçek bir iş kuralının ya da gerçek bir veri probleminin olduğu projeler.">
           I'm based in Istanbul. Most of my day-to-day is Spring Boot, PostgreSQL, and React, usually
           on internal tools that other teams end up depending on. I like projects where the interesting
           part is a real business rule or a real data problem, not just wiring up a CRUD screen.
         </p>
-        <p>
+        <p data-en="The repos below are mostly generic, from-scratch rewrites of things I originally built for a university employer. The real production code and infrastructure stay theirs, but the underlying design and logic are mine, and I rebuilt each one clean so I could actually share it. Each README says which is which." data-tr="Aşağıdaki repolar çoğunlukla, bir üniversitede çalışırken yazdığım şeylerin jenerikleştirilmiş, sıfırdan yeniden yazılmış hali. Gerçek production kodu ve altyapı onlarda kalıyor, ama tasarım ve mantık bana ait, paylaşabilmek için her birini temiz baştan yazdım. Hangisinin ne olduğu her README'de yazıyor.">
           The repos below are mostly generic, from-scratch rewrites of things I originally built for a
-          university employer &mdash; the real production code and infrastructure stay theirs, but the
+          university employer. The real production code and infrastructure stay theirs, but the
           underlying design and logic are mine, and I rebuilt each one clean so I could actually share it.
           Each README says which is which.
         </p>
@@ -39,20 +42,20 @@
   </section>
 
   <section>
-    <h2>Projects</h2>
+    <h2 data-en="Projects" data-tr="Projeler">Projects</h2>
     <div class="grid" id="project-grid">
       <!-- populated by script.js -->
     </div>
   </section>
 
   <section>
-    <h2>Off the clock</h2>
-    <p>Still filling this part in &mdash; photos and clips from outside of work going here soon.</p>
+    <h2 data-en="Off the clock" data-tr="Mesai dışında">Off the clock</h2>
+    <p data-en="Still filling this part in, photos and clips from outside of work going here soon." data-tr="Burası henüz doluyor, iş dışından fotoğraf ve videolar yakında buraya.">Still filling this part in, photos and clips from outside of work going here soon.</p>
   </section>
 </main>
 
 <footer>
-  <p>Last updated <span id="updated"></span></p>
+  <p><span data-en="Last updated" data-tr="Son güncelleme">Last updated</span> <span id="updated"></span></p>
 </footer>
 
 <script src="script.js"></script>

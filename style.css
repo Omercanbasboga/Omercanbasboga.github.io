@@ -63,6 +63,27 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.about-block {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .about-block {
+    flex-direction: column;
+  }
+}
+
 .grid {
   display: grid;
   gap: 1rem;

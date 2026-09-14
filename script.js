@@ -34,6 +34,31 @@ const projects = [
     desc: "A small dependency-free Java library for reducing long time series down to a fixed point budget without losing spikes. The test that matters most checks a single spike buried in 30,000 points survives being reduced to 300.",
     repo: "https://github.com/Omercanbasboga/minmax-lttb-downsampler",
     tags: ["Java"]
+  },
+  {
+    name: "hollowmere",
+    desc: "A match-3 puzzle set in a small dark-fantasy world I put together for it, original characters and all. Matching a creature's tiles fills its ward meter, and once that's full it's sealed for the rest of the run.",
+    repo: "https://github.com/Omercanbasboga/hollowmere",
+    demo: "https://omercanbasboga.github.io/hollowmere/",
+    tags: ["JavaScript", "Game"]
+  },
+  {
+    name: "hollowmere-liveops",
+    desc: "The config service behind Hollowmere. Lets me tune board size, move limit, and difficulty per level without redeploying the game, with a hardcoded fallback in the client so the game still plays fine if this is asleep.",
+    repo: "https://github.com/Omercanbasboga/hollowmere-liveops",
+    tags: ["Java", "Spring Boot"]
+  },
+  {
+    name: "tallyup",
+    desc: "Group expense splitter. The part I actually cared about is the settlement step — instead of everyone paying everyone back, it works out who owes who and settles it in as few transfers as possible.",
+    repo: "https://github.com/Omercanbasboga/tallyup",
+    tags: ["Java", "Spring Boot", "React"]
+  },
+  {
+    name: "installment-scheduler",
+    desc: "A BNPL-style installment engine. Splits a purchase into a payment plan without the usual cent-rounding drift, and tracks late fees with an idempotency flag so a retried sweep job can't double-charge someone.",
+    repo: "https://github.com/Omercanbasboga/installment-scheduler",
+    tags: ["Java", "Spring Boot"]
   }
 ];
 
@@ -53,6 +78,16 @@ projects.forEach((p) => {
   const desc = document.createElement("p");
   desc.textContent = p.desc;
   card.appendChild(desc);
+
+  if (p.demo) {
+    const links = document.createElement("div");
+    links.className = "links";
+    const demoLink = document.createElement("a");
+    demoLink.href = p.demo;
+    demoLink.textContent = "Live demo";
+    links.appendChild(demoLink);
+    card.appendChild(links);
+  }
 
   const tagWrap = document.createElement("div");
   p.tags.forEach((t) => {

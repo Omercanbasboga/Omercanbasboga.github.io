@@ -81,6 +81,17 @@ const projects = [
     tags: ["Java", "Spring Boot"]
   },
   {
+    name: "hollowmere-vigil",
+    icon: "🕯️",
+    desc: {
+      en: "A branching text RPG in the same Hollowmere world, different mechanic though. You build a Warden, pick a class and put points into your stats, then play through a long chain of scenes where a lot of the choices are real d20 checks against those stats, not just flavor text. Three separate dungeons, six endings, full English/Turkish toggle throughout.",
+      tr: "Hollowmere evreninde geçen ama farklı bir mekanikle çalışan, dallanan bir metin RPG'si. Bir Warden yaratıp bir sınıf seçiyorsun ve statlarına puan dağıtıyorsun, sonrasında onlarca sahne boyunca ilerliyorsun; seçimlerin çoğu süsleme değil, gerçek bir d20 zar atışıyla o statlara karşı test ediliyor. Üç ayrı zindan, altı farklı son, baştan sona tam İngilizce/Türkçe geçiş."
+    },
+    repo: "https://github.com/Omercanbasboga/hollowmere-vigil",
+    demo: "https://omercanbasboga.github.io/hollowmere-vigil/",
+    tags: ["JavaScript", "Game"]
+  },
+  {
     name: "tallyup",
     icon: "💸",
     desc: {
@@ -183,6 +194,31 @@ toggleBtn.addEventListener("click", () => {
 });
 
 applyLang(getLang());
+
+const profilePhoto = document.getElementById("profile-photo");
+if (profilePhoto) {
+  profilePhoto.addEventListener("click", () => {
+    const overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+
+    const img = document.createElement("img");
+    img.src = profilePhoto.src;
+    img.alt = profilePhoto.alt;
+    overlay.appendChild(img);
+
+    const close = () => {
+      overlay.remove();
+      document.removeEventListener("keydown", onKey);
+    };
+    function onKey(e) {
+      if (e.key === "Escape") close();
+    }
+
+    overlay.addEventListener("click", close);
+    document.addEventListener("keydown", onKey);
+    document.body.appendChild(overlay);
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(

@@ -8,11 +8,17 @@
 </head>
 <body>
 <header>
+  <p class="eyebrow">~/omercanbasboga</p>
   <div class="header-top">
-    <h1>Omer Can Basboga</h1>
+    <h1 data-en="Omer Can Basboga" data-tr="Ömer Can Başboğa">Omer Can Basboga</h1>
     <button id="lang-toggle" type="button" aria-label="Switch language">TR</button>
   </div>
   <p class="tagline" data-en="Full-stack developer. Java / Spring Boot on the backend, React on the frontend." data-tr="Full-stack yazılımcı. Backend'de Java / Spring Boot, frontend'de React.">Full-stack developer. Java / Spring Boot on the backend, React on the frontend.</p>
+  <div class="badges">
+    <span class="badge badge-status"><span class="dot"></span><span data-en="Open to opportunities" data-tr="Yeni fırsatlara açık">Open to opportunities</span></span>
+    <span class="badge">📍 Istanbul</span>
+    <span class="badge">🎓 <span data-en="Computer Engineering, 2026" data-tr="Bilgisayar Mühendisliği, 2026">Computer Engineering, 2026</span></span>
+  </div>
   <nav>
     <a href="https://github.com/Omercanbasboga">GitHub</a>
     <a href="https://www.linkedin.com/in/%C3%B6mer-can-ba%C5%9Fbo%C4%9Fa-b7940223a/">LinkedIn</a>
@@ -21,7 +27,7 @@
 </header>
 
 <main>
-  <section>
+  <section class="reveal">
     <h2 data-en="About" data-tr="Hakkımda">About</h2>
     <div class="about-block">
       <img src="assets/profile.jpg" alt="Omer Can Basboga" class="profile-photo">
@@ -40,14 +46,54 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
+    <h2 data-en="Stack" data-tr="Kullandığım teknolojiler">Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-group">
+        <h3 data-en="Backend" data-tr="Backend">Backend</h3>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">Spring Boot</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Express</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3 data-en="Frontend" data-tr="Frontend">Frontend</h3>
+        <div class="chips">
+          <span class="chip">React</span>
+          <span class="chip">Redux</span>
+          <span class="chip">MUI</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3 data-en="Data" data-tr="Veri">Data</h3>
+        <div class="chips">
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Redis</span>
+          <span class="chip">MS SQL</span>
+          <span class="chip">MySQL</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3 data-en="Tooling" data-tr="Araçlar">Tooling</h3>
+        <div class="chips">
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
     <h2 data-en="Projects" data-tr="Projeler">Projects</h2>
     <div class="grid" id="project-grid">
       <!-- populated by script.js -->
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <h2 data-en="Off the clock" data-tr="Mesai dışında">Off the clock</h2>
     <p data-en="Still filling this part in, photos and clips from outside of work going here soon." data-tr="Burası henüz doluyor, iş dışından fotoğraf ve videolar yakında buraya.">Still filling this part in, photos and clips from outside of work going here soon.</p>
   </section>

@@ -2,6 +2,16 @@ const LAST_UPDATED = "2026-11-18T12:00:00";
 
 const projects = [
   {
+    name: "unit-matcher",
+    icon: "🧩",
+    desc: {
+      en: "Matches messy unit names from several HR systems to one official org tree. Rules handle most of it, a local LLM (Qwen on Ollama) only picks from a short list when the rules can't decide, and anything still unsure goes to a person. Their answers get learned, so the same mess doesn't come back.",
+      tr: "Farklı personel sistemlerinden gelen dağınık birim adlarını tek bir resmi birim ağacına eşleştiriyor. İşin çoğunu kurallar çözüyor, kuralların karar veremediği yerde yerel bir LLM (Ollama üzerinde Qwen) kısa bir listeden seçim yapıyor, hâlâ emin olunamayanlar bir insana gidiyor. Verilen cevapları öğrendiği için aynı karmaşa bir daha önüne gelmiyor."
+    },
+    repo: "https://github.com/Omercanbasboga/unit-matcher",
+    tags: ["Python", "Ollama", "PostgreSQL"]
+  },
+  {
     name: "monitoring-hub",
     icon: "📡",
     desc: {

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://omercanbasboga.github.io/sitemap.xml

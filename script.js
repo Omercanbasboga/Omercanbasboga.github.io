@@ -1,3 +1,5 @@
+const LAST_UPDATED = "2026-11-18T12:00:00";
+
 const projects = [
   {
     name: "monitoring-hub",
@@ -180,7 +182,7 @@ function applyLang(lang) {
   renderProjects(lang);
 
   const locale = lang === "tr" ? "tr-TR" : "en-GB";
-  document.getElementById("updated").textContent = new Date().toLocaleDateString(locale, {
+  document.getElementById("updated").textContent = new Date(LAST_UPDATED).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric"
